@@ -46,7 +46,7 @@ nav li {
 nav li a {
     line-height: 80px;
     text-decoration: none;
-    color: black;
+    color: #000000;
 
     font-size: 20px;
     font-style: normal;
@@ -97,13 +97,13 @@ form input[type=text] {
     width: 50%;
     padding: 5px 10px;
 
-    border: 1px solid #07AFC7;
+    border: 1px solid #FFD54F;
 }
 
 form input[type=text]:focus {
     outline: none;
-    border: 1px solid #FFD54F;
-    box-shadow: 0 0 3px #FFD54F;
+    border: 1px solid #07AFC7;
+    box-shadow: 0 0 3px #07AFC7;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -124,15 +124,15 @@ form input[type=submit] {
     width: 20%;
     padding: 5px 10px;
 
-    border: 1px solid #07AFC7;
+    border: 1px solid #FFD54F;
     border-radius: 10px;
-    background-color: #07AFC7;
+    background-color: #FFD54F;
 }
 
 form input[type=submit]:hover {
-    border: 1px solid #FFD54F;
+    border: 1px solid #07AFC7;
     color: #FFFFFF;
-    background-color: #FFD54F;
+    background-color: #07AFC7;
     cursor: pointer;
 }
 

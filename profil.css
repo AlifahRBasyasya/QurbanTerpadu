@@ -1,0 +1,184 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -40px;
+}
+
+/* ---NAVIGATION BAR--- */
+nav {
+    background: white;
+	color: black;
+    min-height: 90px;
+    box-shadow: 0 2px 5px -1px #069AB1;
+
+    position: relative;
+    z-index: 10;
+}
+
+nav img {
+    float: left;
+    margin-left: 2%;
+    margin-top: 15px;
+
+    width: 175px;
+    padding-right: 2%;
+    border-right: 2px solid #C4C4C4;
+}
+
+nav ul {
+    width: 60%;
+    min-width: fit-content;
+    float: right;
+}
+
+nav li {
+    float: right;
+    display: inline;
+    margin-right: 10%;
+}
+
+nav li a {
+    line-height: 80px;
+    text-decoration: none;
+    color: black;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.active, nav li a:hover {
+    color: #07AFC7;
+    text-decoration: underline;
+    text-decoration-color: #FFD54F;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 3px;
+}
+
+/* ---PROFILE INFORMATION--- */
+.data-container {
+    margin: auto;
+    padding: 50px;
+    box-shadow: 0 2px 5px -1px #069AB1;
+}
+
+.data-container h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #FFD54F;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+}
+
+.text-container {
+    height: 400px;
+    text-align: center;
+}
+
+.column-container {
+    display: inline-block;
+    width: 20%;
+    padding: 3%;
+
+    vertical-align: top;
+    text-align: left;
+    border: 1px solid #07AFC7;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #07AFC7;
+}
+
+.column-container span {
+    display: inline-block;
+    width: 40%;
+    position: relative;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.column-container span:after {
+    content: ":";
+    position: absolute;
+    right: 10px;
+  }
+
+.hewan {
+    padding-bottom: 150px;
+    margin-left: 2%;
+}
+
+.picture-column {
+    float: left;
+    width: 30%;
+    margin-left: 2.5%;
+}
+
+.picture-column img {
+    max-width: 100%;
+}
+
+.picture-column h4 {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.picture-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ---DATA CONFIRMATION--- */
+.confirmation-container {
+    text-align: center;
+}
+
+.confirmation-container h2 {
+    padding-top: 25px;
+    padding-bottom: 50px;
+    text-decoration: underline;
+    text-decoration-color: #FFD54F;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+}
+
+.confirmation-container button {
+    margin: 25px 30% 10px;
+    width: 10%;
+    padding: 15px 10px;
+
+    font-size: large;
+    font-weight: bold;
+
+    border: 1px solid #FFD54F;
+    border-radius: 20px;
+    background-color: #FFD54F;
+}
+
+.confirmation-container button:hover {
+    border: 1px solid #07AFC7;
+    color: #FFFFFF;
+    background-color: #07AFC7;
+    cursor: pointer;
+}
+
+/* ---FOOTER--- */
+.push {
+    height: 40px;
+}
+
+footer {
+    height: 40px;
+    background-color: #07AFC7;
+    color: #FFFFFF;
+}
+
+.copyright-container {
+    width: fit-content;
+    margin: auto;
+    padding-top: 10px;
+}
