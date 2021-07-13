@@ -87,13 +87,45 @@ nav li a {
     margin: auto;
 }
 
-.search-id {
+.login {
     padding: 50px;
     text-align: center;
 }
 
-form input[type=text] {
+.login span {
     margin: 5px 0;
+    display: block;
+
+    color: red;
+    text-align: right;
+}
+
+.logged-in {
+    padding: 50px;
+    text-align: center;
+    border: 1px solid #07AFC7;
+    box-shadow: 0 0 3px #07AFC7;
+    border-radius: 25px;
+    margin: 25px 0;
+}
+
+.logged-in h2 {
+    text-decoration: underline;
+    text-decoration-color: #FFD54F;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 3px;
+}
+
+.logged-in span {
+    font-size: 20px;
+    font-weight: bold;
+    
+    display: block;
+    margin: 10px 0;
+}
+
+form input[type=text] {
+    margin: 5px 0 5px 3px;
     width: 50%;
     padding: 5px 10px;
 
@@ -106,17 +138,18 @@ form input[type=text]:focus {
     box-shadow: 0 0 3px #07AFC7;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #000000;
-    opacity: 1; /* Firefox */
+form input[type=password] {
+    margin: 5px 0 5px 6px;
+    width: 50%;
+    padding: 5px 10px;
+
+    border: 1px solid #FFD54F;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #000000;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: #000000;
+form input[type=password]:focus {
+    outline: none;
+    border: 1px solid #07AFC7;
+    box-shadow: 0 0 3px #07AFC7;
 }
 
 form input[type=submit] {
@@ -130,6 +163,26 @@ form input[type=submit] {
 }
 
 form input[type=submit]:hover {
+    border: 1px solid #07AFC7;
+    color: #FFFFFF;
+    background-color: #07AFC7;
+    cursor: pointer;
+}
+
+button {
+    margin: 25px 35% 10px;
+    width: 30%;
+    padding: 10px 5px;
+
+    font-size: large;
+    font-weight: bold;
+
+    border: 1px solid #FFD54F;
+    border-radius: 20px;
+    background-color: #FFD54F;
+}
+
+button:hover {
     border: 1px solid #07AFC7;
     color: #FFFFFF;
     background-color: #07AFC7;
