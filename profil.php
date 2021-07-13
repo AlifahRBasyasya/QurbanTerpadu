@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $conn = mysqli_connect("localhost", "root", "7CacaITB7", "qurbantpd");
+    $conn = mysqli_connect("localhost", "root", "", "qurbantpd");
     
     $username = $_SESSION["username"];
     $result1 = mysqli_query($conn, "SELECT * FROM pekurban WHERE username = '$username'");

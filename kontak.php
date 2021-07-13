@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $conn = mysqli_connect("localhost", "root", "7CacaITB7", "qurbantpd");
+    $conn = mysqli_connect("localhost", "root", "", "qurbantpd");
 ?>
 
 <!DOCTYPE html>
