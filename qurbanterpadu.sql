@@ -39,7 +39,7 @@ INSERT INTO Pekurban (pass, kode_hewan, nama, jenis, lokasi, narahubung, nama_ko
 ("12345", "A-1", "Nur Mutmainnah Rahim", "Sapi", "Yogyakarta", "Alifah RB", "Alifah RB", "080808080808", "img/konfirmasi1.png");
 
 INSERT INTO Hewan (username, bobot, temperatur, tgl_penyembelihan, foto1, foto2, foto3) VALUES
-(1, "100.55", "38.5", NULL, "img/sapi1.jpg", "img/sapi2.jpg", "img/sapi3.jpg");
+(1, "100.55 kg", "38.5", NULL, "img/sapi1.jpg", "img/sapi2.jpg", "img/sapi3.jpg");
 
 INSERT INTO ProgresQurban (username, penerimaan, prapenyembelihan, penyembelihan, pencacahan, distribusi) VALUES
 (1, true, true, true, false, false);
