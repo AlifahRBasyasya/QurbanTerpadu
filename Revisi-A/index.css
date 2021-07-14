@@ -1,0 +1,154 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    min-height: 100%;
+    margin-bottom: -40px;
+}
+
+/* ---NAVIGATION BAR--- */
+nav {
+    background: white;
+	color: black;
+    min-height: 90px;
+    box-shadow: 0 5px 5px -1px #069AB1;
+
+    position: relative;
+    z-index: 10;
+}
+
+nav img {
+    float: left;
+    margin-left: 2%;
+    margin-top: 15px;
+
+    width: 175px;
+    padding-right: 2%;
+    border-right: 2px solid #C4C4C4;
+}
+
+nav ul {
+    width: 60%;
+    min-width: fit-content;
+    float: right;
+}
+
+nav li {
+    float: right;
+    display: inline;
+    margin-right: 10%;
+}
+
+nav li a {
+    line-height: 80px;
+    text-decoration: none;
+    color: #000000;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.active, nav li a:hover {
+    color: #07AFC7;
+    text-decoration: underline;
+    text-decoration-color: #FFD54F;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 3px;
+}
+
+/* ---SLIDING CONTENT--- */
+.slide-container {
+    position: relative;
+    height: 300px;
+    background-color: #07AFC7;
+    color: #FFFFFF;
+}
+
+.slide-content {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* ---FORM--- */
+.form-container {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.search-id {
+    padding: 50px;
+    text-align: center;
+}
+
+form input[type=text] {
+    margin: 5px 0;
+    width: 50%;
+    padding: 5px 10px;
+
+    border: 1px solid #FFD54F;
+}
+
+form input[type=text]:focus {
+    outline: none;
+    border: 1px solid #07AFC7;
+    box-shadow: 0 0 3px #07AFC7;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000000;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #000000;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #000000;
+}
+
+form input[type=submit] {
+    margin: 5px 0;
+    width: 20%;
+    padding: 5px 10px;
+
+    border: 1px solid #FFD54F;
+    border-radius: 10px;
+    background-color: #FFD54F;
+}
+
+form input[type=submit]:hover {
+    border: 1px solid #07AFC7;
+    color: #FFFFFF;
+    background-color: #07AFC7;
+    cursor: pointer;
+}
+
+/* ---FOOTER--- */
+.push {
+    height: 40px;
+}
+
+footer {
+    height: 40px;
+    background-color: #07AFC7;
+    color: #FFFFFF;
+}
+
+.copyright-container {
+    width: fit-content;
+    margin: auto;
+    padding-top: 10px;
+}

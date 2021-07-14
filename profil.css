@@ -59,42 +59,54 @@ nav li a {
     text-underline-offset: 3px;
 }
 
-/* ---PROFILE INFORMATION--- */
-.data-container {
-    margin: auto;
-    padding: 50px;
-    box-shadow: 0 2px 5px -1px #069AB1;
-}
-
-.data-container h2 {
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: #FFD54F;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 3px;
-}
-
-.text-container {
-    height: fit-content;
-    padding-bottom: 50px;
+/* ---PROFILE BUTTON--- */
+.profile-click {
     text-align: center;
 }
 
-.column-container {
+.profile-click button {
     display: inline-block;
-    width: 325px;
-    height: 250px;
-    padding: 3%;
-    margin-top: 25px;
 
+    margin: 25px 10px;
+    width: 150px;
+    padding: 10px 25px;
+
+    font-size: large;
+    font-weight: bold;
+
+    border: 1px solid #07AFC7;
+    color: #07AFC7;
+    background-color: #FFFFFF;
+}
+
+.profile-click button:hover {
+    border: 1px solid #FFD54F;
+    color: #FFD54F;
+    background-color: #FFFFFF;
+    
+    cursor: pointer;
+}
+
+/* ---PROFILE INFORMATION--- */
+.content {
+    max-height: 0;
+    overflow: hidden;
+}
+
+#profile-container {
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+}
+
+.pekurban {
+    display: inline-block;
+    width: 400px;
     vertical-align: top;
     text-align: left;
-    border: 1px solid #07AFC7;
-    border-radius: 50px;
-    box-shadow: 0 0 5px #07AFC7;
 }
 
-.column-container span {
+.pekurban span {
     display: inline-block;
     width: 40%;
     position: relative;
@@ -102,56 +114,36 @@ nav li a {
     margin-bottom: 10px;
 }
 
-.column-container span:after {
+.pekurban span:after {
     content: ":";
     position: absolute;
     right: 10px;
 }
 
-.hewan {
-    margin-left: 2%;
+.confirmation {
+    display: inline-block;
+    width: 400px;
+    vertical-align: top;
 }
 
-.picture-column {
-    float: left;
-    width: 30%;
-    margin-left: 2.5%;
+.confirmation img {
+    width: 100%;
 }
 
-.picture-column img {
-    max-width: 100%;
-}
-
-.picture-column h4 {
-    padding-top: 50px;
-    padding-bottom: 25px;
+.pekurban h2, .confirmation h2, .progres h2, .hewan h2, .picture h2, .tahap-container h2 {
+    font-size: large;
     text-align: center;
-}
-
-.picture-container::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* ---DATA CONFIRMATION--- */
-.confirmation-container {
-    text-align: center;
-}
-
-.confirmation-container h2 {
-    padding-top: 25px;
-    padding-bottom: 50px;
     text-decoration: underline;
     text-decoration-color: #FFD54F;
     text-decoration-thickness: 3px;
     text-underline-offset: 3px;
+    margin-bottom: 15px;
 }
 
-.confirmation-container button {
-    margin: 25px 30% 10px;
-    width: 10%;
-    padding: 15px 10px;
+.confirmation button {
+    margin: 25px 35% 10px;
+    width: 30%;
+    padding: 5px 0px;
 
     font-size: large;
     font-weight: bold;
@@ -161,20 +153,124 @@ nav li a {
     background-color: #FFD54F;
 }
 
-.confirmation-container button:hover {
+.confirmation button:hover {
     border: 1px solid #07AFC7;
     color: #FFFFFF;
     background-color: #07AFC7;
     cursor: pointer;
 }
 
-/* ---PROFILE TABLE--- */
-table {
-    margin: auto;
+.hewan {
+    display: inline-block;
+    vertical-align: middle;
+    width: 400px;
+    text-align: left;
 }
 
-td {
-    padding: 5px 10px;
+.hewan span {
+    display: inline-block;
+    width: 40%;
+    position: relative;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.hewan span:after {
+    content: ":";
+    position: absolute;
+    right: 10px;
+}
+
+.picture {
+    display: inline-block;
+    vertical-align: middle;
+    vertical-align: top;
+    width: 400px;
+}
+
+.picture img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    background-color: #07AFC7;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.tahap-container {
+    padding: 10px;
+    position: relative;
+    width: 40%;
+    text-align: left;
+    border: 1px solid #07AFC7;
+    text-align: center;
+}
+
+.tahap-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -55px;
+    background-color: #FFFFFF;
+    border: 4px solid #FFD54F;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.right::after {
+    left: -55px;
+
+}
+
+.left {
+    left: 0;
+    margin-right: 50px;
+}
+
+.right {
+    left: 48%;
+    margin-left: 50px;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 10;
+    right: -10px;
+    border: medium solid #07AFC7;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #07AFC7;
+}
+  
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: -10px;
+    border: medium solid #07AFC7;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #07AFC7 transparent transparent;
 }
 
 /* ---FOOTER--- */

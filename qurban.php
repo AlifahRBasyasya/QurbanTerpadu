@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $conn = mysqli_connect("localhost", "root", "", "qurbantpd");
+    $conn = mysqli_connect("localhost", "root", "7CacaITB7", "qurbantpd");
 ?>
 
 <!DOCTYPE html>
@@ -40,16 +40,44 @@
 
             <div class="article-container">
                 <div class="article-content">
-                    <img src="img/artikel1.jpg" alt="Artikel1">
-                    <h2>Artikel 1</h2>
+                    <img src="img/kambing.jpg" alt="Artikel">
+                    <h2>Header Artikel</h2>
                 </div>
                 <div class="article-content">
-                    <img src="img/artikel2.jpg" alt="Artikel2">
-                    <h2>Artikel 2</h2>
+                    <img src="img/kambing.jpg" alt="Artikel">
+                    <h2>Header Artikel</h2>
                 </div>
                 <div class="article-content">
-                    <img src="img/artikel3.jpg" alt="Artikel3">
-                    <h2>Artikel 3</h2>
+                    <img src="img/kambing.jpg" alt="Artikel">
+                    <h2>Header Artikel</h2>
+                </div>
+                <div class="article-content">
+                    <img src="img/kambing.jpg" alt="Artikel">
+                    <h2>Header Artikel</h2>
+                </div>
+                <div class="article-content">
+                    <img src="img/kambing.jpg" alt="Artikel">
+                    <h2>Header Artikel</h2>
+                </div>
+                <div class="article-content">
+                    <img src="img/kambing.jpg" alt="Artikel">
+                    <h2>Header Artikel</h2>
+                </div>
+                <div class="article-content">
+                    <img src="img/kambing.jpg" alt="Artikel">
+                    <h2>Header Artikel</h2>
+                </div>
+                <div class="article-content">
+                    <img src="img/kambing.jpg" alt="Artikel">
+                    <h2>Header Artikel</h2>
+                </div>
+                <div class="article-content">
+                    <img src="img/kambing.jpg" alt="Artikel">
+                    <h2>Header Artikel</h2>
+                </div>
+                <div class="article-content">
+                    <img src="img/kambing.jpg" alt="Artikel">
+                    <h2>Header Artikel</h2>
                 </div>
             </div>
             

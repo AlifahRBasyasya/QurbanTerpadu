@@ -63,25 +63,28 @@ nav li a {
 .article-container {
     padding-top: 50px;
     text-align: center;
+    
 }
 
 .article-content {
-    display: inline-block;
-    width: 250px;
-
+    height: fit-content;
     position: relative;
-    margin: 10px;
 }
 
 .article-content img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: inline;
+    margin: 0px;
+    padding: 10px;
+    vertical-align: middle;
 }
 
 .article-content h2 {
     position: absolute;
-    right: 10px;
-    bottom: 10px;
-    color: #FFD54F;
+    bottom: 7%;
+    right: 47%;
+    color: #FFFFFF;
 }
 
 /* ---FOOTER--- */
