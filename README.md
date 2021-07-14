@@ -13,6 +13,7 @@
 4. Import qurbanterpadu.sql ke database baru yang sudah dibuat
 5. Pada file index.php, profil.php, qurban.php, kontak.php ubah baris berikut
 > $conn = mysqli_connect("localhost", "username", "password", "nama_database");
+   
    sesuai dengan pengaturan DBMS Anda
 
 ## Cara Penggunaan
@@ -24,5 +25,7 @@
 
 ## Akun
 Untuk saat ini hanya ada satu akun yang terdaftar pada database. Login pada prototipe web dapat dilakukan dengan:
-> Username: 1
-> Password: 12345
+```
+Username: 1
+Password: 12345
+```
