@@ -68,7 +68,7 @@
                     <h2>Konfirmasi</h2>
                     <img src=<?= $row1["foto_konfirmasi"]; ?> alt="Konfirmasi">
                     <br>
-                    <button>Revisi</button>
+                    <a href="https://forms.gle/UCzVngvocEm7mTJBA"><button>Revisi</button></a>
                 </div>
             </div>
             <div class="hewan-container content" id="hewan-container">
