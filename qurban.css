@@ -59,6 +59,31 @@ nav li a {
     text-underline-offset: 3px;
 }
 
+/* ---HEADLINE--- */
+.headline-container {
+    width: fit-content;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.headline-container h2 {
+    text-decoration: underline;
+    text-decoration-color: #FFD54F;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 3px;
+    margin-bottom: 25px;
+}
+
+.slides-container {
+    width: 1000px;
+    height: 707px;
+    overflow: scroll;
+}
+
+.slides-container img {
+    height: 100%;
+}
+
 /* ---ARTICLE--- */
 .article-container {
     padding-top: 50px;
