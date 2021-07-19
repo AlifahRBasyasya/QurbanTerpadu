@@ -39,7 +39,7 @@
             </nav>
 
             <div class="headline-container">
-                <h2>Headline!</h2>
+                <h2>Qurban77 - 1439H/2018</h2>
                 <div class="slides-container">
                     <img src="img/Artikel/Slide1.PNG" alt="Slide1">
                     <img src="img/Artikel/Slide2.PNG" alt="Slide2">
