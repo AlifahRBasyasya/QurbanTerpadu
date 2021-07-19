@@ -1,28 +1,14 @@
 <?php
     session_start();
 
-    $conn = mysqli_connect("localhost", "root", "7CacaITB7", "qurbantpd");
+    $conn = mysqli_connect("localhost", "root", "", "qurbanterpadu");
     
-    $username = $_SESSION["username"];
-    $result1 = mysqli_query($conn, "SELECT * FROM pekurban WHERE username = '$username'");
-    $result2 = mysqli_query($conn, "SELECT * FROM hewan WHERE username = '$username'");
-    $result3 = mysqli_query($conn, "SELECT * FROM progresqurban WHERE username = '$username'");
+    $kode_pekurban = $_SESSION["kode_pekurban"];
+    $result1 = mysqli_query($conn, "SELECT * FROM pekurban_hewan WHERE kode_pekurban = '$kode_pekurban'");
+    $result2 = mysqli_query($conn, "SELECT * FROM progress_qurban WHERE kode_pekurban = '$kode_pekurban'");
 
     $row1 = mysqli_fetch_assoc($result1);
-    foreach ($row1 as $key => $value) {
-        if (is_null($value)) {
-            $row1[$key] = "Belum ada";
-        }
-    }
-
     $row2 = mysqli_fetch_assoc($result2);
-    foreach ($row2 as $key => $value) {
-        if (is_null($value)) {
-            $row2[$key] = "Belum ada";
-        }
-    }
-
-    $row3 = mysqli_fetch_assoc($result3);
 ?>
 
 <!DOCTYPE html>
@@ -56,49 +42,68 @@
             <div class="pekurban-container content" id="pekurban-container">
                 <div class="pekurban" id="pekurban">
                     <h2>Pekurban</h2><br>
-                    <p><span>Kode Pekurban</span><?= $row1["kode_hewan"]; ?></p>
-                    <p><span>Nama Pekurban</span><?= $row1["nama"]; ?></p>
-                    <p><span>Jenis Kurban</span><?= $row1["jenis"]; ?></p>
-                    <p><span>Lokasi</span><?= $row1["lokasi"]; ?></p>
-                    <p><span>Narahubung</span><?= $row1["narahubung"]; ?></p>
-                    <p><span>Kontak Pekurban</span><?= $row1["nama_kontak"]; ?></p>
-                    <p><span>No WA Kontak</span><?= $row1["no_wa_kontak"]; ?></p>
+                    <p><span>Kode Pekurban</span><?= $row1["Kode_Pekurban"]; ?></p>
+                    <p><span>Nama Pekurban</span><?= $row1["Nama_Pekurban"]; ?></p>
+                    <p><span>Jenis Kurban</span><?= $row1["Jenis_Kurban"]; ?></p>
+                    <p><span>Lokasi</span><?= $row1["Lokasi"]; ?></p>
+                    <p><span>Narahubung</span><?= $row1["NaraHubung"]; ?></p>
+                    <p><span>Kontak Pekurban</span><?= $row1["Kontak_Pekurban"]; ?></p>
+                    <p><span>No WA Kontak</span><?= $row1["No_WA_Contact_Person"]; ?></p>
                 </div>
                 <div class="confirmation">
                     <h2>Konfirmasi</h2>
-                    <img src=<?= $row1["foto_konfirmasi"]; ?> alt="Konfirmasi">
-                    <br>
+                    <img src="img/konfirmasi.png" alt="Konfirmasi">
+                    <br><br>
+                    <p>Jika terdapat kesalahan pada label di atas, silakan laporkan dengan menekan tombol di bawah ini</p>
                     <a href="https://forms.gle/UCzVngvocEm7mTJBA"><button>Revisi</button></a>
                 </div>
             </div>
             <div class="hewan-container content" id="hewan-container">
                 <div class="hewan" id="hewan">
                     <h2>Hewan Qurban</h2><br>
-                    <p><span>Bobot</span><?= $row2["bobot"]; ?> kg</p>
-                    <p><span>Temperatur</span><?= $row2["temperatur"]; ?>&#8451;</p>
-                    <p><span>Tanggal Penyembelihan</span><?= $row2["tgl_penyembelihan"]; ?></p>
+                    <?php if ($row1["Bobot"] == "tidak ada"):?>
+                        <p><span>Bobot</span><?= $row1["Bobot"]; ?></p>
+                    <?php else : ?>
+                        <p><span>Bobot</span><?= $row1["Bobot"]; ?> kg</p>
+                    <?php endif ; ?>
+
+                    <?php if ($row1["Temperatur"] == "tidak ada"):?>
+                        <p><span>Temperatur</span><?= $row1["Temperatur"]; ?></p>
+                    <?php else : ?>
+                        <p><span>Temperatur</span><?= $row1["Temperatur"]; ?>&#8451;</p>
+                    <?php endif ; ?>
+
+                    <p><span>Tanggal Penyembelihan</span><?= $row1["Tgl_Penyembelihan"]; ?></p>
                 </div>
                 <div class="picture">
                     <h2>Gambar Hewan Qurban</h2>
-                    <div class="picture-column">
-                        <img src=<?= $row2["foto1"]; ?> alt="Sapi 1">
-                        <h4>Foto 1</h4>
-                    </div>
-                    <div class="picture-column">
-                        <img src=<?= $row2["foto2"]; ?> alt="Sapi 2">
-                        <h4>Foto 2</h4>
-                    </div>
-                    <div class="picture-column">
-                        <img src=<?= $row2["foto3"]; ?> alt="Sapi 3">
-                        <h4>Foto 3</h4>
-                    </div>
+                    <?php if (file_exists("img/Hewan/" . $row1["Foto_1"] . ".jpeg")):?>
+                        <div class="picture-column">
+                            <img src=<?= "img/Hewan/" . $row1["Foto_1"] . ".jpeg"; ?> alt="Sapi 1">
+                            <h4>Foto 1</h4>
+                        </div>
+                    <?php endif ; ?>
+
+                    <?php if (file_exists("img/Hewan/" . $row1["Foto_2"] . ".jpeg")):?>
+                        <div class="picture-column">
+                            <img src=<?= "img/Hewan/" . $row1["Foto_2"] . ".jpeg"; ?> alt="Sapi 2">
+                            <h4>Foto 2</h4>
+                        </div>
+                    <?php endif ; ?>
+
+                    <?php if (file_exists("img/Hewan/" . $row1["Foto_3"] . ".jpeg")):?>
+                        <div class="picture-column">
+                            <img src=<?= "img/Hewan/" . $row1["Foto_3"] . ".jpeg"; ?> alt="Sapi 3">
+                            <h4>Foto 3</h4>
+                        </div>
+                    <?php endif ; ?>
                 </div>
             </div>
             <div class="progres-container content" id="progres-container">
                 <div class="timeline">
                     <div class="tahap-container left">
                         <h2>Penerimaan</h2>
-                        <?php if ($row3["penerimaan"] == "1"):?>
+                        <?php if ($row2["Penerimaan"] == "1"):?>
                             <p>Status: Sudah diterima di lokasi</p>
                         <?php else : ?>
                             <p>Status: Belum sampai di lokasi</p>
@@ -107,7 +112,7 @@
                     <br>
                     <div class="tahap-container right">
                         <h2>Pra Penyembelihan</h2>
-                        <?php if ($row3["prapenyembelihan"] == "1"):?>
+                        <?php if ($row2["Prapenyembelihan"] == "1"):?>
                             <p>Status: Siap disembelih</p>
                         <?php else : ?>
                             <p>Status: Menunggu pengecekan</p>
@@ -116,7 +121,7 @@
                     <br>
                     <div class="tahap-container left">
                         <h2>Penyembelihan</h2>
-                        <?php if ($row3["penyembelihan"] == "1"):?>
+                        <?php if ($row2["Penyembelihan"] == "1"):?>
                             <p>Status: Sudah disembelih</p>
                         <?php else : ?>
                             <p>Status: Belum disembelih</p>
@@ -125,7 +130,7 @@
                     <br>
                     <div class="tahap-container right">
                         <h2>Pencacahan</h2>
-                        <?php if ($row3["pencacahan"] == "1"):?>
+                        <?php if ($row2["Pencacahan"] == "1"):?>
                             <p>Status: Siap didistribusikan</p>
                         <?php else : ?>
                             <p>Status: Menunggu giliran</p>
@@ -134,7 +139,7 @@
                     <br>
                     <div class="tahap-container left">
                         <h2>Distribusi</h2>
-                        <?php if ($row3["distribusi"] == "1"):?>
+                        <?php if ($row2["Distribusi"] == "1"):?>
                             <p>Status: Sudah didistribusikan</p>
                         <?php else : ?>
                             <p>Status: Sedang didistribusikan</p>

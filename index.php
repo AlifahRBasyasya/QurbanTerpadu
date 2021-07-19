@@ -1,32 +1,25 @@
 <?php
     session_start();
 
-    $conn = mysqli_connect("localhost", "root", "7CacaITB7", "qurbantpd");
+    $conn = mysqli_connect("localhost", "root", "", "qurbanterpadu");
 
     $error = NULL;
     if (isset($_POST['submit'])){
-        $username = $_POST["username"];
-        $password = $_POST["pass"];
+        $kode_pekurban = $_POST["kode_pekurban"];
 
-        $result = mysqli_query($conn, "SELECT * FROM pekurban WHERE username = '$username'");
-        if ($username == NULL || $password == NULL){
-            $error = "Isi setiap kolom di atas";
+        $result = mysqli_query($conn, "SELECT * FROM pekurban_hewan WHERE kode_pekurban = '$kode_pekurban'");
+        if ($kode_pekurban == NULL){
+            $error = "Isi kolom di atas";
         }
         else {
             if(mysqli_num_rows($result) == 1) {
-                $row = mysqli_fetch_assoc($result);
-                if ($password == $row["pass"]) {
-                    $_SESSION["login"] = true;
-                    $_SESSION["username"] = $username;
-                    header("Location: profil.php");
-                    exit;
-                }
-                else {
-                    $error = "Password salah";
-                }
+                $_SESSION["login"] = true;
+                $_SESSION["kode_pekurban"] = $kode_pekurban;
+                header("Location: profil.php");
+                exit;
             }
             else {
-                $error ="Cek kembali username Anda";
+                $error ="Cek kembali kode pekurban Anda";
             }
         }
     }
@@ -70,7 +63,6 @@
                     <h2>Qurban Terpadu</h2>
                     <br>
                     <p>Qurban Terpadu adalah platform bertemunya dua orang yang ingin melakukan proses jual-beli penyembelihan hewan qurban dalam rangka memperingati hari idul adha
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac lorem hendrerit, facilisis neque quis, consectetur arcu. Integer vel felis sed dui iaculis mattis sed at nibh.
                     </p>
                 </div>
             </div>
@@ -79,14 +71,11 @@
                 <?php if (!isset($_SESSION['login'])):?>
                     <div class="login">
                         <p>Untuk melihat lebih lanjut progress qurban, Anda perlu login terlebih dahulu. <br>
-                            Silakan masukkan username dan password yang sudah diberikan. </p>
+                            Silakan masukkan kode pekurban yang sudah diberikan. </p>
                         <br>
                         <form action="" method="POST">
-                            <label for="username">Username:</label>
-                            <input type="text" name="username" id="username">
-                            <br>
-                            <label for="password">Password:</label>
-                            <input type="password" name="pass" id="pass">
+                            <label for="kode_pekurban">Kode Pekurban:</label>
+                            <input type="text" name="kode_pekurban" id="kode_pekurban">
                             <span><?= $error; ?></span>
                             <input type="submit" name="submit" value="Login">
                         </form>

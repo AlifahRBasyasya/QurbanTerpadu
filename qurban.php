@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $conn = mysqli_connect("localhost", "root", "7CacaITB7", "qurbantpd");
+    $conn = mysqli_connect("localhost", "root", "", "qurbanterpadu");
 ?>
 
 <!DOCTYPE html>
@@ -41,24 +41,24 @@
             <div class="headline-container">
                 <h2>Headline!</h2>
                 <div class="slides-container">
-                    <img src="img/Artikel/Slide1.png" alt="Slide1">
-                    <img src="img/Artikel/Slide2.png" alt="Slide2">
-                    <img src="img/Artikel/Slide3.png" alt="Slide3">
-                    <img src="img/Artikel/Slide4.png" alt="Slide4">
-                    <img src="img/Artikel/Slide5.png" alt="Slide5">
-                    <img src="img/Artikel/Slide6.png" alt="Slide6">
-                    <img src="img/Artikel/Slide7.png" alt="Slide7">
-                    <img src="img/Artikel/Slide8.png" alt="Slide8">
-                    <img src="img/Artikel/Slide9.png" alt="Slide9">
-                    <img src="img/Artikel/Slide10.png" alt="Slide10">
-                    <img src="img/Artikel/Slide11.png" alt="Slide11">
-                    <img src="img/Artikel/Slide12.png" alt="Slide12">
-                    <img src="img/Artikel/Slide13.png" alt="Slide13">
-                    <img src="img/Artikel/Slide14.png" alt="Slide14">
-                    <img src="img/Artikel/Slide15.png" alt="Slide15">
-                    <img src="img/Artikel/Slide16.png" alt="Slide16">
-                    <img src="img/Artikel/Slide17.png" alt="Slide17">
-                    <img src="img/Artikel/Slide18.png" alt="Slide18">
+                    <img src="img/Artikel/Slide1.PNG" alt="Slide1">
+                    <img src="img/Artikel/Slide2.PNG" alt="Slide2">
+                    <img src="img/Artikel/Slide3.PNG" alt="Slide3">
+                    <img src="img/Artikel/Slide4.PNG" alt="Slide4">
+                    <img src="img/Artikel/Slide5.PNG" alt="Slide5">
+                    <img src="img/Artikel/Slide6.PNG" alt="Slide6">
+                    <img src="img/Artikel/Slide7.PNG" alt="Slide7">
+                    <img src="img/Artikel/Slide8.PNG" alt="Slide8">
+                    <img src="img/Artikel/Slide9.PNG" alt="Slide9">
+                    <img src="img/Artikel/Slide10.PNG" alt="Slide10">
+                    <img src="img/Artikel/Slide11.PNG" alt="Slide11">
+                    <img src="img/Artikel/Slide12.PNG" alt="Slide12">
+                    <img src="img/Artikel/Slide13.PNG" alt="Slide13">
+                    <img src="img/Artikel/Slide14.PNG" alt="Slide14">
+                    <img src="img/Artikel/Slide15.PNG" alt="Slide15">
+                    <img src="img/Artikel/Slide16.PNG" alt="Slide16">
+                    <img src="img/Artikel/Slide17.PNG" alt="Slide17">
+                    <img src="img/Artikel/Slide18.PNG" alt="Slide18">
                 </div>
             </div>
 
