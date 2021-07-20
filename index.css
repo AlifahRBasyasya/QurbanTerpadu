@@ -27,8 +27,6 @@ nav {
     margin-top: 15px;
 
     width: 175px;
-    padding-right: 2%;
-    border-right: 2px solid #C4C4C4;
 }
 
 .mbkm {
@@ -36,13 +34,19 @@ nav {
     margin-left: 2%;
     margin-top: 15px;
 
-    width: 100px;
-    padding-right: 2%;
-    border-right: 2px solid #C4C4C4;
+    width: 145px;
+}
+
+.q77 {
+    float: left;
+    margin-left: 7%;
+    margin-top: 10px;
+
+    width: 140px;
 }
 
 nav ul {
-    width: 60%;
+    width: 40%;
     min-width: fit-content;
     float: right;
 }

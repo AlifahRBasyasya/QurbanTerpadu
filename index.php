@@ -43,8 +43,9 @@
     <body>
         <div class="wrapper">
             <nav>
-                <img class="salman" src="img/rumahamal.png" alt="Rumah Amal">
-                <img class="mbkm" src="img/kampusmerdeka.png" alt="Kampus Merdeka">
+                <img class="salman" src="img/RumahAmalSalman.png" alt="Rumah Amal Salman">
+                <img class="mbkm" src="img/MBKM_QurbanTerpadu.png" alt="Kampus Merdeka">
+                <img class="q77" src="img/Q77.png" alt="Qurban77">
                 <ul>
                     <?php if (isset($_SESSION['login'])):?>
                         <li><a href="profil.php">Profil  <i class="far fa-user"></i></a></li>
