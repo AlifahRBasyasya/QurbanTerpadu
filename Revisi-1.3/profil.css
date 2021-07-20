@@ -19,22 +19,12 @@ nav {
     z-index: 10;
 }
 
-.salman {
+nav img {
     float: left;
     margin-left: 2%;
     margin-top: 15px;
 
     width: 175px;
-    padding-right: 2%;
-    border-right: 2px solid #C4C4C4;
-}
-
-.mbkm {
-    float: left;
-    margin-left: 2%;
-    margin-top: 15px;
-
-    width: 100px;
     padding-right: 2%;
     border-right: 2px solid #C4C4C4;
 }
@@ -79,8 +69,7 @@ nav li a {
 
     margin: 25px 10px;
     width: 150px;
-    height: 50px;
-    vertical-align: top;
+    padding: 10px 25px;
 
     font-size: large;
     font-weight: bold;
@@ -90,9 +79,10 @@ nav li a {
     background-color: #FFFFFF;
 }
 
-.profile-click button:hover, .profile-click button:focus {
+.profile-click button:hover {
     border: 1px solid #FFD54F;
     color: #FFD54F;
+    background-color: #FFFFFF;
     
     cursor: pointer;
 }
@@ -138,8 +128,6 @@ nav li a {
 
 .confirmation img {
     width: 100%;
-    padding: 5px;
-    border: 1px solid #000000;
 }
 
 .pekurban h2, .confirmation h2, .progres h2, .hewan h2, .picture h2, .tahap-container h2 {
@@ -153,8 +141,7 @@ nav li a {
 }
 
 .confirmation button {
-    margin: 25px 10px 10px;
-    display: inline-block;
+    margin: 25px 35% 10px;
     width: 30%;
     padding: 5px 0px;
 
@@ -171,12 +158,6 @@ nav li a {
     color: #FFFFFF;
     background-color: #07AFC7;
     cursor: pointer;
-}
-
-.confirmation span {
-    display: inline-block;
-    padding: 50px;
-    border: 1px solid #000000;
 }
 
 .hewan {
@@ -290,17 +271,6 @@ nav li a {
     border: medium solid #07AFC7;
     border-width: 10px 10px 10px 0;
     border-color: transparent #07AFC7 transparent transparent;
-}
-
-/* ---DEVELOPMENT MESSAGE--- */
-.development {
-    width: fit-content;
-    margin: 25px auto;
-    color: red;
-
-    padding: 7px;
-    border: 1px solid red;
-    border-radius: 15px;
 }
 
 /* ---FOOTER--- */

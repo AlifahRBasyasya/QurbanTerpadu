@@ -19,22 +19,12 @@ nav {
     z-index: 10;
 }
 
-.salman {
+nav img {
     float: left;
     margin-left: 2%;
     margin-top: 15px;
 
     width: 175px;
-    padding-right: 2%;
-    border-right: 2px solid #C4C4C4;
-}
-
-.mbkm {
-    float: left;
-    margin-left: 2%;
-    margin-top: 15px;
-
-    width: 100px;
     padding-right: 2%;
     border-right: 2px solid #C4C4C4;
 }
@@ -180,17 +170,6 @@ form input[type=submit]:hover {
 .socmed i {
     margin-right: 5%;
     vertical-align: middle;
-}
-
-/* ---DEVELOPMENT MESSAGE--- */
-.development {
-    width: fit-content;
-    margin: auto;
-    color: red;
-
-    padding: 7px;
-    border: 1px solid red;
-    border-radius: 15px;
 }
 
 /* ---FOOTER--- */

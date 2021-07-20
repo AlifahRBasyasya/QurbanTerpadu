@@ -30,44 +30,37 @@
     <body>
         <div class="wrapper">
             <nav>
-                <img class="salman" src="img/rumahamal.png" alt="Rumah Amal">
-                <img class="mbkm" src="img/kampusmerdeka.png" alt="Kampus Merdeka">
+                <img src="img/rumahamal.png" alt="Rumah Amal">
                 <ul>
                     <li><a href="profil.php" class="active">Profil  <i class="far fa-user"></i></a></li>
                     <li><a href="kontak.php">Kontak</a></li>
-                    <li><a href="qurban.php">CeritaQurban</a></li>
+                    <li><a href="qurban.php">Qurban</a></li>
                     <li><a href="index.php">Home</a></li>
                 </ul>
             </nav>
 
             <div class="pekurban-container content" id="pekurban-container">
                 <div class="pekurban" id="pekurban">
-                    <h2>Data Pekurban</h2><br>
+                    <h2>Pekurban</h2><br>
                     <p><span>Kode Pekurban</span><?= $row1["Kode_Pekurban"]; ?></p>
                     <p><span>Nama Pekurban</span><?= $row1["Nama_Pekurban"]; ?></p>
                     <p><span>Jenis Kurban</span><?= $row1["Jenis_Kurban"]; ?></p>
                     <p><span>Lokasi</span><?= $row1["Lokasi"]; ?></p>
-                    <p><span>Pengelola</span><?= $row1["Pengelola"]; ?></p>
+                    <p><span>Narahubung</span><?= $row1["NaraHubung"]; ?></p>
                     <p><span>Kontak Pekurban</span><?= $row1["Kontak_Pekurban"]; ?></p>
                     <p><span>No WA Kontak</span><?= $row1["No_WA_Contact_Person"]; ?></p>
                 </div>
                 <div class="confirmation">
-                    <h2>Label Penyembelihan</h2>
-                    <?php if (file_exists("img/LabelQurban/LabelQurban_" . $kode_pekurban . ".png")):?>
-                        <img src=<?= "img/LabelQurban/LabelQurban_" . $kode_pekurban . ".png"; ?> alt="Label">
-                    <?php else : ?>
-                        <span>Label Belum Ada</span>
-                    <?php endif ; ?>
+                    <h2>Konfirmasi</h2>
+                    <img src="img/konfirmasi.png" alt="Konfirmasi">
                     <br><br>
-                    <p>Mohon memeriksa Nama Pekurban. Jika tidak ada kesalahan, tekan tombol 'Sudah Benar'. Jika ada perbaikan, tekan tombol 'Revisi'.</p>
+                    <p>Jika terdapat kesalahan pada label di atas, silakan laporkan dengan menekan tombol di bawah ini</p>
                     <a href="https://forms.gle/UCzVngvocEm7mTJBA"><button>Revisi</button></a>
-                    <button class="confirmed">Sudah Benar</button>
                 </div>
             </div>
             <div class="hewan-container content" id="hewan-container">
                 <div class="hewan" id="hewan">
-                    <h2>Data Hewan Qurban</h2><br>
-                    <p><span>Jenis Kurban</span><?= $row1["Jenis_Kurban"]; ?></p>
+                    <h2>Hewan Qurban</h2><br>
                     <?php if ($row1["Bobot"] == "tidak ada"):?>
                         <p><span>Bobot</span><?= $row1["Bobot"]; ?></p>
                     <?php else : ?>
@@ -81,11 +74,6 @@
                     <?php endif ; ?>
 
                     <p><span>Tanggal Penyembelihan</span><?= $row1["Tgl_Penyembelihan"]; ?></p>
-                    <br>
-                    <p><span>Kode Pekurban</span><?= $row1["Kode_Pekurban"]; ?></p>
-                    <p><span>Nama Pekurban</span><?= $row1["Nama_Pekurban"]; ?></p>
-                    <p><span>Lokasi</span><?= $row1["Lokasi"]; ?></p>
-                    <p><span>Pengelola</span><?= $row1["Pengelola"]; ?></p>
                 </div>
                 <div class="picture">
                     <h2>Gambar Hewan Qurban</h2>
@@ -158,19 +146,16 @@
                         <?php endif ; ?>
                     </div>
                 </div>
-                <div class="development">
-                    <span>Halaman ini masih dalam tahap pengembangan</span>
-                </div>
             </div>
 
             <div class="profile-click">
-                <button class="click" onclick="document.getElementById('profile-container').innerHTML=document.getElementById('pekurban-container').innerHTML;">
-                    Data Pekurban
+                <button class="pekurban-click" onclick="document.getElementById('profile-container').innerHTML=document.getElementById('pekurban-container').innerHTML;">
+                    Pekurban
                 </button>
-                <button class="click" onclick="document.getElementById('profile-container').innerHTML=document.getElementById('hewan-container').innerHTML;">
-                    Foto Penyembelihan
+                <button class="hewan-click" onclick="document.getElementById('profile-container').innerHTML=document.getElementById('hewan-container').innerHTML;">
+                    Hewan
                 </button>
-                <button class="click" onclick="document.getElementById('profile-container').innerHTML=document.getElementById('progres-container').innerHTML;">
+                <button class="progres-click" onclick="document.getElementById('profile-container').innerHTML=document.getElementById('progres-container').innerHTML;">
                     Progress
                 </button>
             </div>

@@ -21,12 +21,22 @@ nav {
     z-index: 10;
 }
 
-nav img {
+.salman {
     float: left;
     margin-left: 2%;
     margin-top: 15px;
 
     width: 175px;
+    padding-right: 2%;
+    border-right: 2px solid #C4C4C4;
+}
+
+.mbkm {
+    float: left;
+    margin-left: 2%;
+    margin-top: 15px;
+
+    width: 100px;
     padding-right: 2%;
     border-right: 2px solid #C4C4C4;
 }
@@ -61,23 +71,113 @@ nav li a {
     text-underline-offset: 3px;
 }
 
-/* ---SLIDING CONTENT--- */
-.slide-container {
+/* ---RUNNING TEXT--- */
+.running-text {
+    height: 30px;
+    overflow: hidden;
     position: relative;
+}
+
+.running-text p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding-top: 3px;
+    line-height: 30px;
+    text-align: center;
+
+    transform: translateX(100%);
+    animation: running-text 25s linear infinite;
+}
+
+.running-text span {
+    color: red;
+    font-weight: bold;
+}
+
+@keyframes running-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ---SLIDING CONTENT--- */
+.slideshow-container {
+    box-sizing: border-box;
+    position: relative;
+
     height: 300px;
+    width: 100%;
+
+
     background-color: #07AFC7;
     color: #FFFFFF;
 }
 
-.slide-content {
+.slideshow-content {
+    box-sizing: border-box;
+    display: none;
+    text-align: center;
     position: absolute;
     width: 80%;
+
     text-align: center;
 
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.slideshow-content p {
+    font-size: larger;
+}
+
+.prev, .next {
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 /* ---FORM--- */
@@ -170,7 +270,7 @@ form input[type=submit]:hover {
 }
 
 button {
-    margin: 25px 35% 10px;
+    margin: 25px 35% 50px;
     width: 30%;
     padding: 10px 5px;
 
@@ -187,6 +287,33 @@ button:hover {
     color: #FFFFFF;
     background-color: #07AFC7;
     cursor: pointer;
+}
+
+/* ---REPORT--- */
+.report {
+    margin: 25px auto;
+    padding: 15px;
+    width: 60%;
+
+    text-align: justify;
+    text-justify: inter-word;
+    background-color: #07AFC7;
+    opacity: 0.8;
+    border-radius: 25px;
+}
+
+.report h2{
+    text-align: center;
+    font-style: italic;
+}
+
+.report span {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.report p {
+    margin: 15px 0;
 }
 
 /* ---FOOTER--- */

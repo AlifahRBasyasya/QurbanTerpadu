@@ -4,6 +4,8 @@ html, body {
 }
 
 .wrapper {
+    display: flex;
+    flex-flow: column;
     min-height: 100%;
     margin-bottom: -40px;
 }
@@ -13,28 +15,18 @@ nav {
     background: white;
 	color: black;
     min-height: 90px;
-    box-shadow: 0 2px 5px -1px #069AB1;
+    box-shadow: 0 5px 5px -1px #069AB1;
 
     position: relative;
     z-index: 10;
 }
 
-.salman {
+nav img {
     float: left;
     margin-left: 2%;
     margin-top: 15px;
 
     width: 175px;
-    padding-right: 2%;
-    border-right: 2px solid #C4C4C4;
-}
-
-.mbkm {
-    float: left;
-    margin-left: 2%;
-    margin-top: 15px;
-
-    width: 100px;
     padding-right: 2%;
     border-right: 2px solid #C4C4C4;
 }
@@ -54,7 +46,7 @@ nav li {
 nav li a {
     line-height: 80px;
     text-decoration: none;
-    color: black;
+    color: #000000;
 
     font-size: 20px;
     font-style: normal;
@@ -69,40 +61,72 @@ nav li a {
     text-underline-offset: 3px;
 }
 
-/* ---KONTAK--- */
-.contact-container {
+/* ---SLIDING CONTENT--- */
+.slide-container {
+    position: relative;
+    height: 300px;
+    background-color: #07AFC7;
+    color: #FFFFFF;
+}
+
+.slide-content {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* ---FORM--- */
+.form-container {
+    width: fit-content;
+    height: fit-content;
     margin: auto;
-    padding: 50px; 
 }
 
-.contact-container h2 {
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.detail-container {
-    height: 400px;
+.login {
+    padding: 50px;
     text-align: center;
 }
 
-.column-container {
-    display: inline-block;
-    width: 20%;
-    padding: 3%;
+.login span {
+    margin: 5px 0;
+    display: block;
 
+    color: red;
+    text-align: right;
+}
+
+.logged-in {
+    padding: 50px;
+    text-align: center;
     border: 1px solid #07AFC7;
-    border-radius: 50px;
-    box-shadow: 0 0 5px #07AFC7;
+    box-shadow: 0 0 3px #07AFC7;
+    border-radius: 25px;
+    margin: 25px 0;
 }
 
-.question {
-    text-align: left;
-    margin-right: 10%;
+.logged-in h2 {
+    text-decoration: underline;
+    text-decoration-color: #FFD54F;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 3px;
+}
+
+.logged-in span {
+    font-size: 20px;
+    font-weight: bold;
+    
+    display: block;
+    margin: 10px 0;
 }
 
 form input[type=text] {
-    margin: 5px 0 15px;
-    width: 90%;
+    margin: 5px 0 5px 3px;
+    width: 50%;
     padding: 5px 10px;
 
     border: 1px solid #FFD54F;
@@ -114,36 +138,23 @@ form input[type=text]:focus {
     box-shadow: 0 0 3px #07AFC7;
 }
 
-form textarea {
-    margin: 5px 0;
-    width: 90%;
+form input[type=password] {
+    margin: 5px 0 5px 6px;
+    width: 50%;
     padding: 5px 10px;
 
     border: 1px solid #FFD54F;
 }
 
-form textarea:focus {
+form input[type=password]:focus {
     outline: none;
     border: 1px solid #07AFC7;
     box-shadow: 0 0 3px #07AFC7;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #000000;
-    opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #000000;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: #000000;
-}
-
 form input[type=submit] {
-    margin: 5px 30%;
-    width: 40%;
+    margin: 5px 0;
+    width: 20%;
     padding: 5px 10px;
 
     border: 1px solid #FFD54F;
@@ -158,39 +169,24 @@ form input[type=submit]:hover {
     cursor: pointer;
 }
 
-.socmed {
-    text-align: left;
+button {
+    margin: 25px 35% 10px;
+    width: 30%;
+    padding: 10px 5px;
+
+    font-size: large;
+    font-weight: bold;
+
+    border: 1px solid #FFD54F;
+    border-radius: 20px;
+    background-color: #FFD54F;
 }
 
-.socmed a {
-    /* text-decoration: none; */
-    font-size: 20px;
-    color: #000000;
-    text-decoration-color: #FFD54F;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 3px;
-
-    margin: 100px 0;
-}
-
-.socmed a:hover {
-    color: #07AFC7;
-}
-
-.socmed i {
-    margin-right: 5%;
-    vertical-align: middle;
-}
-
-/* ---DEVELOPMENT MESSAGE--- */
-.development {
-    width: fit-content;
-    margin: auto;
-    color: red;
-
-    padding: 7px;
-    border: 1px solid red;
-    border-radius: 15px;
+button:hover {
+    border: 1px solid #07AFC7;
+    color: #FFFFFF;
+    background-color: #07AFC7;
+    cursor: pointer;
 }
 
 /* ---FOOTER--- */

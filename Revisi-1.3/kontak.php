@@ -23,17 +23,16 @@
     <body>
         <div class="wrapper">
             <nav>
-                <img class="salman" src="img/rumahamal.png" alt="Rumah Amal">
-                <img class="mbkm" src="img/kampusmerdeka.png" alt="Kampus Merdeka">
+                <img src="img/rumahamal.png" alt="Rumah Amal">
                 <ul>
                     <?php if (isset($_SESSION['login'])):?>
                         <li><a href="profil.php">Profil  <i class="far fa-user"></i></a></li>
                         <li><a href="kontak.php" class="active">Kontak</a></li>
-                        <li><a href="qurban.php">CeritaQurban</a></li>
+                        <li><a href="qurban.php">Qurban</a></li>
                         <li><a href="index.php">Home</a></li>
                     <?php else : ?>
                         <li><a href="kontak.php" class="active">Kontak</a></li>
-                        <li><a href="qurban.php">CeritaQurban</a></li>
+                        <li><a href="qurban.php">Qurban</a></li>
                         <li><a href="index.php">Home</a></li>
                     <?php endif ; ?>
                 </ul>
@@ -66,10 +65,6 @@
                         <a href="#"><i class="fas fa-home fa-2x fa-fw"></i>Alamat</a>
                     </div>
                 </div>
-            </div>
-
-            <div class="development">
-                <span>Halaman ini masih dalam tahap pengembangan</span>
             </div>
 
             <div class="push"></div>
